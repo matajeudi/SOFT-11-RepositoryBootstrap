@@ -1,0 +1,32 @@
+.purple {
+    background-color: purple;
+    border-color: aliceblue;
+    height: 50px;
+}
+
+.aquamarine {
+    background-color: aquamarine;
+    border-color: aliceblue;
+    height: 400px;
+    text-align: center;
+
+}
+
+.grey {
+    background-color: gray;
+    border-color: aliceblue;
+    height: 200px;
+    text-align: center;
+}
+
+.blue {
+    background-color: blue;
+    border-color: aliceblue;
+    height: 400px;
+    text-align: center;
+
+}
+
+.containersRow {
+    height: 400px;
+}
