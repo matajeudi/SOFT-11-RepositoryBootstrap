@@ -1,7 +1,9 @@
 {
-  "name": "taller",
-  "version": "0.0.0",
+  "name": "jeudi-bootstrap-web",
+  "version": "1.0.0",
   "private": true,
+  "author": "Jeudi Mata",
+  "description": "Implementación web con Bootstrap - Proyecto personal UCENFOTEC",
   "type": "module",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"

@@ -11,7 +11,7 @@
 
 export default {
 
-    name: 'servicesPage',
+    name: 'profesionalsProfiles',
 
 }
 
