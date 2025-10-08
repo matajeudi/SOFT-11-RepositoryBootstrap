@@ -1,8 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import homepageView from '../views/homepage.vue'
+import homepageView from '.../views/homePage.vue'
 import galleryCatsPageView from '../views/galleryCats.vue'
-import informationPageView from '../views/galleryCats.vue'
-import servicesPageView from '../views/profesionalsProfiles.vue'
+import profesionalsPageView from '../views/profesionalsProfiles.vue'
 import contactPageView from '../views/contactPage.vue'
 
 
@@ -20,15 +19,15 @@ const router = createRouter({
       component: homepageView,
     },
     {
-      path: '/information',
-      name: 'Information',
-      component: informationPageView,
+      path: '/Gallery',
+      name: 'Gallery',
+      component: galleryCatsPageView,
     },
 
         {
-      path: '/services',
-      name: 'Services',
-      component: servicesPageView,
+      path: '/Profesionals',
+      name: 'Profesionals',
+      component: profesionalsPageView,
     },
         {
       path: '/contact',
