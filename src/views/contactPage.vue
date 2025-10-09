@@ -1,6 +1,6 @@
 <template>
 
-  <div class="mainInventario wireframe">
+  <div class="mainInventario wireframe pb-5">
     <div class="sidebarInventario wireframe"> Sidebar </div>
     <div class="inventarioTable wireframe"> Ventas/historia </div>
   </div>

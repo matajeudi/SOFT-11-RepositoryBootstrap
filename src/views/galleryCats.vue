@@ -1,6 +1,6 @@
 <template>
 
-  <div class="main wireframe">
+  <div class="main wireframe pb-5">
     <div class="formLogin wireframe"> Formulario de login </div>
     <div class="carrouselLogin wireframe"> Carrousel </div>
   </div>

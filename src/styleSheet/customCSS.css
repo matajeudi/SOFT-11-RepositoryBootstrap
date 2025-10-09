@@ -1,19 +1,335 @@
-.col-2,
-.col-4,
-.col-6,
-.col-8,
-.col-12,
-.col-md-6,
-.col-lg-4 {
-    background-color: #062748;
-    padding: 15px;
-    height: 100%;
-    margin-bottom: 10px;
+:root {
+  --light-purple: #766DA7;
+  --black: #15191E;
+  --camo-green: #7A9663;
+  --ebony-green: #556842;
+  --laurel-green: #A0AE91;
 }
 
-.headerTitle,
-.regularText,
-.nav-link,
+.logo {
+  height: auto;
+  min-width: 40px;
+  max-width: 80px;
+}
+
+.bi {
+  font-size: 1.2rem;
+}
+/* Fondo general */
+body, .app-container {
+  background-color: var(--laurel-green) !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Asegurar que no haya contenido debajo del footer */
+body {
+  overflow-x: hidden;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.h4 {
+  color: var(--light-purple);
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* Header y título */
+.headerTitle {
+  color: var(--laurel-green);
+  text-shadow: 2px 2px 4px rgba(118, 109, 167, 0.3);
+}
+
+header {
+  background-color: var(--black) !important;
+  border-bottom: 3px solid var(--ebony-green);
+}
+
+/* Visualización de containers y rows */
+.container-fluid {
+  background-color: var(--ebony-green) !important;
+}
+
+/* Navegación */
+.nav-link {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  color: var(--laurel-green) !important;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background: var(--light-purple) !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(118, 109, 167, 0.4);
+}
+
+/* Hover effect para inicio de sesión */
+.btn-signIn {
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 2px solid var(--ebony-green);
+  color: var(--laurel-green) !important;
+  background: transparent;
+}
+
+.btn-signIn:hover {
+  background-color: var(--light-purple) !important;
+  color: white !important;
+  border-color: var(--light-purple);
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(85, 104, 66, 0.5);
+}
+
+/* Footer */
+footer {
+  background-color: var(--black) !important;
+  color: var(--laurel-green);
+  border-top: 2px solid var(--camo-green);
+}
+
 .footerText {
-    color: aquamarine;
+  color: var(--laurel-green);
+}
+
+/* Íconos de redes sociales */
+.social-icon {
+  color: var(--light-purple) !important;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: rgba(118, 109, 167, 0.1);
+}
+
+.social-icon:hover {
+  color: var(--camo-green) !important;
+  transform: scale(1.2);
+  background-color: rgba(122, 150, 99, 0.2);
+}
+
+/* Decoración lateral sólida */
+.app-container::before,
+.app-container::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  width: 80px;
+  height: 100vh;
+  background-color: var(--ebony-green);
+  z-index: -1;
+  border: 2px solid var(--light-purple);
+}
+
+.app-container::before {
+  left: 0;
+}
+
+.app-container::after {
+  right: 0;
+}
+
+/* Cards y contenido */
+.card {
+  background-color: var(--laurel-green) !important;
+  border: 2px solid var(--ebony-green) !important;
+  box-shadow: 0 4px 8px rgba(21, 25, 30, 0.3);
+}
+
+.card-title {
+  color: var(--black) !important;
+}
+
+.card-text {
+  color: var(--ebony-green) !important;
+}
+
+/* Imagen de card con fondo */
+.card-img-top {
+  background-color: var(--camo-green) !important;
+  height: auto;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+/* Wireframes para otras vistas */
+.wireframe {
+  background-color: var(--laurel-green) !important;
+  border: 2px dashed var(--light-purple) !important;
+  color: var(--black) !important;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.main {
+  display: flex;
+  min-height: 400px;
+}
+
+.formLogin, .carrouselLogin {
+  flex: 1;
+}
+
+.mainInventario {
+  display: flex;
+  min-height: 400px;
+}
+
+.sidebarInventario {
+  flex: 0 0 200px;
+}
+
+.inventarioTable {
+  flex: 1;
+}
+
+
+/* Estilos del modal */
+.custom-modal {
+  background-color: var(--laurel-green);
+  border: 2px solid var(--light-purple);
+  border-radius: 15px;
+}
+
+.custom-modal .modal-header {
+  background-color: var(--ebony-green);
+  color: white;
+  border-bottom: 2px solid var(--light-purple);
+  border-radius: 13px 13px 0 0;
+}
+
+.custom-modal .modal-body {
+  background-color: var(--laurel-green);
+  padding: 2rem;
+}
+
+.custom-modal .form-label {
+  color: var(--black);
+  font-weight: 600;
+}
+
+.custom-modal .form-control {
+  border: 2px solid var(--camo-green);
+  background-color: white;
+}
+
+.custom-modal .form-control:focus {
+  border-color: var(--light-purple);
+  box-shadow: 0 0 0 0.2rem rgba(118, 109, 167, 0.25);
+}
+
+.custom-modal .input-group-text {
+  background-color: var(--camo-green);
+  border: 2px solid var(--camo-green);
+  color: white;
+}
+
+.btn-modal-primary {
+  background-color: var(--light-purple);
+  border: none;
+  color: white;
+  padding: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-modal-primary:hover {
+  background-color: var(--ebony-green);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(85, 104, 66, 0.4);
+}
+
+.custom-modal a {
+  color: var(--light-purple);
+}
+
+.custom-modal a:hover {
+  color: var(--ebony-green);
+}
+/* Estilos para la sección de bienvenida */
+.welcome-section {
+  background-color: var(--laurel-green);
+}
+
+.welcome-image {
+  border: 3px solid var(--light-purple);
+  box-shadow: 0 4px 12px rgba(118, 109, 167, 0.3);
+  height: 350px;
+}
+
+.welcome-title {
+  color: var(--black);
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.welcome-subtitle {
+  color: var(--ebony-green);
+  font-weight: 600;
+}
+
+.welcome-description {
+  color: var(--black);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.welcome-info {
+  color: var(--black);
+  font-size: 0.95rem;
+}
+
+/* Botones de la sección de bienvenida */
+.btn-welcome-primary {
+  background-color: var(--light-purple);
+  border: 2px solid var(--light-purple);
+  color: white;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-welcome-primary:hover {
+  background-color: var(--ebony-green);
+  border-color: var(--ebony-green);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(85, 104, 66, 0.4);
+}
+
+.btn-welcome-secondary {
+  background-color: transparent;
+  border: 2px solid var(--camo-green);
+  color: var(--camo-green);
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-welcome-secondary2 {
+  background-color: transparent;
+  border: 2px solid var(--camo-green);
+  color: var(--black);
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-welcome-secondary:hover {
+  background-color: var(--camo-green);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(122, 150, 99, 0.4);
 }
