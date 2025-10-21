@@ -16,11 +16,9 @@
           <div class="col-md-6">
             <div class="welcome-content">
               <h1 class="welcome-title mb-3">¡Bienvenido a MewGods!</h1>
-              <h3 class="welcome-subtitle mb-4">Tu destino para todo sobre gatos</h3>
+              <h3 class="welcome-subtitle mb-4">Red de profesionales gatunos para contratar en tu vida.</h3>
               <p class="welcome-description mb-4">
-                Descubre el mundo felino con nosotros. En MewGods encontrarás una galería increíble,
-                profesionales especializados en cuidado felino y toda la información que necesitas
-                para cuidar a tu compañero de cuatro patas.
+                Descubre el mundo felino con nosotros con calificacion maxima 5 estrellas por expertos. En MewGods encontrarás una variedad de profesionales que diversas habilidades de las cuales muchos te sorprenderan. Desde romper macetas, cazar ratones, rascar las paredes y maullar a las 5am.
               </p>
               <p class="welcome-info mb-4">
                 <strong>Proyecto:</strong> Implementación Web con Bootstrap<br>
@@ -30,12 +28,12 @@
 
               <!-- Botones de accion en la seccion de bienvenida -->
               <div class="welcome-actions">
-                <button class="btn btn-welcome-primary me-3">
-                  <i class="bi bi-images me-2"></i>Ver Galería
-                </button>
+                <button class="btn btn-welcome-secondary me-3">
+                  <router-link to="/Experiencias"><i class="bi bi-images me-2"></i>Ver Experiencias de Usuarios
+                  </router-link></button>
                 <button class="btn btn-welcome-secondary2">
-                  <i class="bi bi-people me-2"></i>Conocer Profesionales
-                </button>
+                  <router-link to="/Profesionals"><i class="bi bi-people me-2"></i>Conocer Profesionales
+                  </router-link></button>
               </div>
             </div>
           </div>
@@ -44,7 +42,7 @@
     </section>
 
     <!-- Seccion adicional con card informativa -->
-    <section class="info-section py-4">
+    <section class="info-section py-2">
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8 col-12">
           <div class="card h-100">

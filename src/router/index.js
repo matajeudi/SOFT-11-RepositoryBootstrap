@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import homepageView from '../views/homePage.vue'
-import galleryCatsPageView from '../views/galleryCats.vue'
+import experiencesUserPageView from '../views/experiencesUser.vue'
 import profesionalsPageView from '../views/profesionalsProfiles.vue'
 import contactPageView from '../views/contactPage.vue'
 
@@ -19,9 +19,9 @@ const router = createRouter({
       component: homepageView,
     },
     {
-      path: '/Gallery',
-      name: 'Gallery',
-      component: galleryCatsPageView,
+      path: '/Experiencias',
+      name: 'Experiencias',
+      component: experiencesUserPageView,
     },
 
         {

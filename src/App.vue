@@ -99,8 +99,8 @@ import { RouterView } from 'vue-router';
             <nav class="col-12">
               <ul class="nav justify-content-center">
                 <li class="nav-item p-2"><router-link to="/home" class="nav-link">Inicio</router-link></li>
-                <li class="nav-item p-2"><router-link to="/information" class="nav-link">Galeria</router-link></li>
-                <li class="nav-item p-2"><router-link to="/services" class="nav-link">Profesionales</router-link></li>
+                <li class="nav-item p-2"><router-link to="/Experiencias" class="nav-link">Experiencias</router-link></li>
+                <li class="nav-item p-2"><router-link to="/Profesionals" class="nav-link">Profesionales</router-link></li>
                 <li class="nav-item p-2"><router-link to="/contact" class="nav-link">Contacto</router-link></li>
               </ul>
             </nav>
