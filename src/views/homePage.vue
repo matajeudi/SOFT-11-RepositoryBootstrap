@@ -16,7 +16,7 @@
           <div class="col-md-6">
             <div class="welcome-content">
               <h1 class="welcome-title mb-3">¡Bienvenido a MewGods!</h1>
-              <h3 class="welcome-subtitle mb-4">Red de profesionales gatunos para contratar en tu vida.</h3>
+              <h2 class="welcome-subtitle mb-4">Red de profesionales gatunos para contratar en tu vida.</h2>
               <p class="welcome-description mb-4">
                 Descubre el mundo felino con nosotros con calificacion maxima 5 estrellas por expertos. En MewGods encontrarás una variedad de profesionales que diversas habilidades de las cuales muchos te sorprenderan. Desde romper macetas, cazar ratones, rascar las paredes y maullar a las 5am.
               </p>
@@ -47,7 +47,7 @@
         <div class="col-lg-6 col-md-8 col-12">
           <div class="card h-100">
             <div class="card-body d-flex flex-column text-center">
-              <h5 class="card-title">Página de Inicio</h5>
+              <h1 class="card-title">Página de Inicio</h1>
               <p class="card-text">Expo 2 - Implementación Bootstrap</p>
               <div class="mt-auto">
                 <span class="h4">Plataforma MewGods</span>

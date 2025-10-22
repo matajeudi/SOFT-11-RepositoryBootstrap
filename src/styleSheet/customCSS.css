@@ -36,10 +36,6 @@ body {
   color: var(--royal-purple);
 }
 
-footer {
-  margin-top: auto;
-}
-
 /* Header y título */
 .headerTitle {
   color: var(--light-gray);
@@ -95,6 +91,7 @@ footer {
   background: linear-gradient(90deg, var(--dark-navy) 0%, var(--royal-purple) 100%) !important;
   color: var(--light-gray);
   border-top: 2px solid var(--light-purple);
+  margin-top: auto;
 }
 
 .footerText {
@@ -163,8 +160,8 @@ footer {
 }
 
 .info-section .card {
-  opacity: 0.6; /* 0 = invisible, 1 = fully opaque */
-  background-color: rgba(255, 255, 255, 0.8) !important; /* RGBA with alpha channel */
+  opacity: 0.6;
+  background-color: rgba(255, 255, 255, 0.8) !important;
 }
 
 /* Wireframes para otras vistas */
@@ -176,28 +173,6 @@ footer {
   margin: 10px;
   text-align: center;
   font-weight: bold;
-}
-
-.main {
-  display: flex;
-  min-height: 400px;
-}
-
-.formLogin, .carrouselLogin {
-  flex: 1;
-}
-
-.mainInventario {
-  display: flex;
-  min-height: 400px;
-}
-
-.sidebarInventario {
-  flex: 0 0 200px;
-}
-
-.inventarioTable {
-  flex: 1;
 }
 
 

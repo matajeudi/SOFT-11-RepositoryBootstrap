@@ -21,16 +21,16 @@ import { RouterView } from 'vue-router';
 
           <div class="row align-items-center p-2">
 
-            <!-- Espacio izquierdo -->
+            <!-- Espacio izquierdo invisible -->
             <div class="col-3"></div>
 
             <!-- Logo y título centrados -->
             <div class="col-6 d-flex justify-content-center align-items-center">
-              <img src="../public/michiLogo.ico" alt="Logo" class="logo img-fluid me-2">
+              <img src="../public/michiLogo.ico" alt="Logo MewGods" class="logo img-fluid me-2">
               <h1 class="headerTitle mb-0">MewGods</h1>
             </div>
 
-            <!-- Iniciar sesión a la derecha boton -->
+            <!-- Iniciar sesión a la derecha boton y trigger para el modal -->
             <div class="col-3 d-flex justify-content-end">
               <button type="button" class="btn btn-signIn" data-bs-toggle="modal" data-bs-target="#iniciarSesion">
                 <i class="bi bi-person-circle"></i> Iniciar Sesion
@@ -43,9 +43,9 @@ import { RouterView } from 'vue-router';
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content custom-modal">
                 <div class="modal-header">
-                  <h5 class="modal-title">
+                  <span class="modal-title">
                     <i class="bi bi-person-workspace me-2"></i>Iniciar Sesión
-                  </h5>
+                  </span>
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
                 </div>
@@ -61,7 +61,7 @@ import { RouterView } from 'vue-router';
                         <span class="input-group-text">
                           <i class="bi bi-envelope"></i>
                         </span>
-                        <input type="email" class="form-control" id="email" required>
+                        <input type="email" class="form-control" id="email" placeholder="Ingrese su correo" required>
                         <div class="invalid-feedback">Por favor ingresa un correo válido.</div>
                       </div>
                     </div>
@@ -69,7 +69,7 @@ import { RouterView } from 'vue-router';
                     <!-- contraseña-->
                     <div class="mb-3">
                       <label for="modalPassword" class="form-label">Contraseña *</label>
-                      <input type="password" class="form-control" id="modalPassword" required>
+                      <input type="password" class="form-control" id="modalPassword" placeholder="Ingrese su contraseña" required>
                     </div>
 
                     <div class="mb-3 form-check">
@@ -99,8 +99,10 @@ import { RouterView } from 'vue-router';
             <nav class="col-12">
               <ul class="nav justify-content-center">
                 <li class="nav-item p-2"><router-link to="/home" class="nav-link">Inicio</router-link></li>
-                <li class="nav-item p-2"><router-link to="/Experiencias" class="nav-link">Experiencias</router-link></li>
-                <li class="nav-item p-2"><router-link to="/Profesionals" class="nav-link">Profesionales</router-link></li>
+                <li class="nav-item p-2"><router-link to="/Experiencias" class="nav-link">Experiencias</router-link>
+                </li>
+                <li class="nav-item p-2"><router-link to="/Profesionals" class="nav-link">Profesionales</router-link>
+                </li>
                 <li class="nav-item p-2"><router-link to="/contact" class="nav-link">Contacto</router-link></li>
               </ul>
             </nav>
@@ -117,33 +119,33 @@ import { RouterView } from 'vue-router';
     <div class="container-fluid">
       <footer class="row">
         <div class="col-12 text-center mt-3">
-          <h3 class="footerText">MewGods</h3>
+          <h1 class="footerText">MewGods</h1>
         </div>
         <div class="col-12 text-center mt-4">
           <p class="footerText">© 2025 UCENFOTEC - EXPO 2 [SOFT-11] / Jeudi Mata. Todos los derechos reservados.</p>
         </div>
 
-        <!--Seccion footer con enlance y redes sociales usando iconografia de bootstrap y colores boostrap -->
+        <!--Seccion footer con enlance y redes sociales usando iconografia de bootstrap y colores boostrap, con label respectivo-->
         <div class="col-12 text-center mb-3">
           <div class="d-flex justify-content-center gap-3">
             <!--Facebook-->
-            <a href="https://facebook.com" class="social-icon">
+            <a href="https://facebook.com" class="social-icon" aria-label="enlance a Facebook">
               <i class="bi bi-facebook"></i>
             </a>
             <!--Whatsapp-->
-            <a href="https://wa.me/123456789" class="social-icon">
+            <a href="https://wa.me/123456789" class="social-icon" aria-label="enlance a WhatsApp">
               <i class="bi bi-whatsapp"></i>
             </a>
             <!--TwitterX-->
-            <a href="https://x.com" class="social-icon">
+            <a href="https://x.com" class="social-icon" aria-label="enlance a X (twitter)">
               <i class="bi bi-twitter-x"></i>
             </a>
             <!--Youtube-->
-            <a href="https://youtube.com" class="social-icon">
+            <a href="https://youtube.com" class="social-icon" aria-label="enlace a Youtube">
               <i class="bi bi-youtube"></i>
             </a>
             <!--LinkedIn-->
-            <a href="https://linkedin.com" class="social-icon">
+            <a href="https://linkedin.com" class="social-icon" aria-label="enlance a LinkedIn">
               <i class="bi bi-linkedin"></i>
             </a>
           </div>

@@ -1,57 +1,126 @@
 <template>
 
-  <!-- Breadcrums agregados a la vista gestion de perfil usuarios -->
+  <!-- Breadcrums agregados a la vista gestion de perfil profesionales -->
+  <!-- Flexbox de Bootstrap para alinear breadcrumb y boton en extremos opuestos -->
   <div class="d-flex justify-content-between align-items-center mb-3">
     <nav aria-label="breadcrumb">
-      <ol class="breadcrumb mb-0">
+      <!-- Componente breadcrumb de Bootstrap con padding vertical personalizado -->
+      <ol class="breadcrumb py-2 mb-0">
         <li class="breadcrumb-item">
-          <a href="#" class="text-decoration-none">
-            <i class="bi bi-speedometer2"></i> Dashboard
-          </a>
+          <router-link to="/home" class="text-decoration-none">
+            Inicio
+          </router-link>
         </li>
 
         <li class="breadcrumb-item">
-          <a href="#" class="text-decoration-none">Usuarios</a>
+          <router-link to="/Profesionals" class="text-decoration-none">Profesionales</router-link>
         </li>
-
-        <li class="breadcrumb-item active" aria-current="page">Gestión de Perfiles</li>
       </ol>
     </nav>
-
-    <button class="btn btn-welcome-primary btn-sm">
-      <i class="bi bi-plus"></i> Nuevo Usuario
-    </button>
   </div>
 
-  <!--Ejemplo de simular perfil de usuario-->
-  <div class="card" style="width: 18rem;">
-    <img src="https://cdn.stocksnap.io/img-thumbs/960w/animal-face_ZT9SCKS111.jpg" class="card-img-top"
-      alt="Foto de perfil">
+  <!-- Container fluid para usar todo el ancho disponible -->
+  <div class="container fluid">
 
-    <div class="card-body text-center">
-      <h5 class="card-title">Jeudi Mata</h5>
-      <p class="card-text text-muted">Estudiante de UCenfotec</p>
-      <p class="card-text">
-        <small class="text-muted">
-          <i class="bi bi-geo-alt"></i> San Jose, Costa Rica
-        </small>
-      </p>
-    </div>
+    <!-- Sistema de grid Bootstrap: una fila conteniendo todas las cards -->
+    <div class="row">
+      <!-- Grid responsivo: 1 columna movil, 2 tablet, 3 desktop -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <!-- Ejemplo de simular perfil de usuario -->
+        <!-- Componente card de Bootstrap para mostrar informacion estructurada -->
+        <div class="card">
+          <img src="https://cdn.stocksnap.io/img-thumbs/960w/animal-face_ZT9SCKS111.jpg" class="card-img-top"
+            alt="Foto de perfil">
 
-    <div class="card-footer">
-      <div class="d-flex justify-content-between">
-        <button class="btn btn-welcome-primary btn-sm">Ver Perfil</button>
-        <button class="btn btn-welcome-secondary btn-sm">Contactar</button>
+          <!-- Card body con texto centrado usando utility class de Bootstrap -->
+          <div class="card-body text-center">
+            <h1 class="card-title">Michi michi</h1>
+            <!-- Text-muted para color de texto secundario -->
+            <p class="card-text text-muted">Profesional de maullar a las 5am</p>
+            <p class="card-text">
+              <small class="text-muted">
+                <!-- Icono de Bootstrap Icons con aria-label para accesibilidad -->
+                <i class="bi bi-geo-alt" aria-label="Localidad"></i> San Jose, Costa Rica
+              </small>
+            </p>
+          </div>
+
+          <!-- Card footer con flexbox para distribuir botones -->
+          <div class="card-footer">
+            <!-- Flexbox utilities para espaciar botones en extremos -->
+            <div class="d-flex justify-content-between">
+              <!-- Botones personalizados con tamaño pequeño -->
+              <button class="btn btn-welcome-primary btn-sm">Ver Perfil</button>
+              <button class="btn btn-welcome-secondary btn-sm">Contactar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Ejemplo de simular perfil de profesionales -->
+      <!-- Segunda card con mismo grid responsivo -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <img src="https://cdn.stocksnap.io/img-thumbs/960w/animal-face_ZT9SCKS111.jpg" class="card-img-top"
+            alt="Foto de perfil">
+
+          <div class="card-body text-center">
+            <h1 class="card-title">Peter Pancho</h1>
+            <p class="card-text text-muted">Profesional en cazar ratones</p>
+            <p class="card-text">
+              <small class="text-muted">
+                <i class="bi bi-geo-alt" aria-label="Localidad"></i> Heredia, Costa Rica
+              </small>
+            </p>
+          </div>
+
+          <div class="card-footer">
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-welcome-primary btn-sm">Ver Perfil</button>
+              <button class="btn btn-welcome-secondary btn-sm">Contactar</button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- Ejemplo de simular perfil de usuario -->
+      <!-- Tercera card completando el layout responsivo -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <img src="https://cdn.stocksnap.io/img-thumbs/960w/animal-face_ZT9SCKS111.jpg" class="card-img-top"
+            alt="Foto de perfil">
+
+          <div class="card-body text-center">
+            <h1 class="card-title">Manchitas</h1>
+            <p class="card-text text-muted">Profesional de robar comida</p>
+            <p class="card-text">
+              <small class="text-muted">
+                <i class="bi bi-geo-alt" aria-label="Localidad"></i> Cartago, Costa Rica
+              </small>
+            </p>
+          </div>
+
+          <div class="card-footer">
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-welcome-primary btn-sm">Ver Perfil</button>
+              <button class="btn btn-welcome-secondary btn-sm">Contactar</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 
-    <!-- Botón que activa el modal - boton de eliminar usuario-->
-    <button type="button" class="btn" style="background: linear-gradient(45deg, #dc3545 0%, #c82333 100%); color: white; border: none;" data-bs-toggle="modal" data-bs-target="#deleteModal">
+  <!-- Botón que activa el modal - boton de eliminar usuario-->
+  <!-- <button type="button" class="btn" style="background: linear-gradient(45deg, #dc3545 0%, #c82333 100%); color: white; border: none;" data-bs-toggle="modal" data-bs-target="#deleteModal">
       <i class="bi bi-trash"></i> Eliminar Usuario
-    </button>
+    </button> -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="deleteModal" tabindex="-1">
+  <!-- Modal -->
+  <!-- <div class="modal fade" id="deleteModal" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header" style="background: linear-gradient(90deg, var(--dark-navy) 0%, #dc3545 100%); color: white;">
@@ -84,8 +153,7 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </div> -->
 </template>
 
 <script>
