@@ -1,3 +1,10 @@
+/**
+ * Proyecto: Implementación Web con Bootstrap
+ * Autor: Jeudi Mata
+ * UCENFOTEC - SOFT-11
+ * Año: 2025
+ */
+
 import './styleSheet/customCSS.css'
 
 import { createApp } from 'vue'

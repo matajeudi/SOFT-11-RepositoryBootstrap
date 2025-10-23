@@ -1,19 +1,333 @@
-.col-2,
-.col-4,
-.col-6,
-.col-8,
-.col-12,
-.col-md-6,
-.col-lg-4 {
-    background-color: #062748;
-    padding: 15px;
-    height: 100%;
-    margin-bottom: 10px;
+:root {
+  --dark-navy: #0E2148;
+  --royal-purple: #483AA0;
+  --light-purple: #7965C1;
+  --light-gray: #F8F9FA;
 }
 
-.headerTitle,
-.regularText,
-.nav-link,
+.logo {
+  height: auto;
+  min-width: 40px;
+  max-width: 80px;
+}
+
+.bi {
+  font-size: 1.2rem;
+}
+/* Fondo general */
+body, .app-container {
+  background: linear-gradient(135deg, var(--light-gray) 0%, #ffffff 100%) !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Asegurar que no haya contenido debajo del footer */
+body {
+  overflow-x: hidden;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.h4 {
+  color: var(--royal-purple);
+}
+
+/* Header y título */
+.headerTitle {
+  color: var(--light-gray);
+  text-shadow: 2px 2px 4px rgba(14, 33, 72, 0.5);
+}
+
+header {
+  background: linear-gradient(90deg, var(--dark-navy) 0%, var(--royal-purple) 100%) !important;
+  border-bottom: 3px solid var(--light-purple);
+}
+
+/* Visualización de containers y rows */
+.container-fluid {
+  background: linear-gradient(90deg, var(--dark-navy) 0%, var(--royal-purple) 100%) !important;
+}
+
+/* Navegación */
+.nav-link {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  color: var(--light-gray) !important;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background: var(--light-purple) !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(121, 101, 193, 0.4);
+}
+
+/* Hover effect para inicio de sesión */
+.btn-signIn {
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 2px solid var(--light-purple);
+  color: var(--light-gray) !important;
+  background: transparent;
+}
+
+.btn-signIn:hover {
+  background-color: var(--light-purple) !important;
+  color: white !important;
+  border-color: var(--light-purple);
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(121, 101, 193, 0.5);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, var(--dark-navy) 0%, var(--royal-purple) 100%) !important;
+  color: var(--light-gray);
+  border-top: 2px solid var(--light-purple);
+  margin-top: auto;
+}
+
 .footerText {
-    color: aquamarine;
+  color: var(--light-gray);
+}
+
+/* Íconos de redes sociales */
+.social-icon {
+  color: var(--light-purple) !important;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: rgba(121, 101, 193, 0.1);
+}
+
+.social-icon:hover {
+  color: var(--light-gray) !important;
+  transform: scale(1.2);
+  background-color: rgba(248, 249, 250, 0.3);
+}
+
+/* Decoración lateral sólida */
+.app-container::before,
+.app-container::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  width: 80px;
+  height: 100vh;
+  background: linear-gradient(180deg, var(--dark-navy) 0%, var(--royal-purple) 100%);
+  z-index: -1;
+  border: 2px solid var(--light-purple);
+}
+
+.app-container::before {
+  left: 0;
+}
+
+.app-container::after {
+  right: 0;
+}
+
+/* Cards y contenido */
+.card {
+  background: linear-gradient(135deg, white 0%, var(--light-gray) 100%) !important;
+  border: 2px solid var(--royal-purple) !important;
+  box-shadow: 0 4px 8px rgba(14, 33, 72, 0.3);
+}
+
+.card-title {
+  color: var(--dark-navy) !important;
+}
+
+.card-text {
+  color: var(--royal-purple) !important;
+}
+
+/* Imagen de card con fondo */
+.card-img-top {
+  background-color: var(--light-purple) !important;
+  height: auto;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.info-section .card {
+  opacity: 0.6;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Wireframes para otras vistas */
+.wireframe {
+  background-color: var(--light-gray) !important;
+  border: 2px dashed var(--royal-purple) !important;
+  color: var(--dark-navy) !important;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* Estilos del modal */
+.custom-modal {
+  background: linear-gradient(135deg, white 0%, var(--light-gray) 100%);
+  border: 2px solid var(--royal-purple);
+  border-radius: 15px;
+}
+
+.custom-modal .modal-header {
+  background: linear-gradient(90deg, var(--dark-navy) 0%, var(--royal-purple) 100%);
+  color: white;
+  border-bottom: 2px solid var(--light-purple);
+  border-radius: 13px 13px 0 0;
+}
+
+.custom-modal .modal-body {
+  background: linear-gradient(135deg, white 0%, var(--light-gray) 100%);
+  padding: 2rem;
+}
+
+.custom-modal .form-label {
+  color: var(--dark-navy);
+  font-weight: 600;
+}
+
+.custom-modal .form-control {
+  border: 2px solid var(--light-purple);
+  background-color: white;
+}
+
+.custom-modal .form-control:focus {
+  border-color: var(--royal-purple);
+  box-shadow: 0 0 0 0.2rem rgba(72, 58, 160, 0.25);
+}
+
+.custom-modal .input-group-text {
+  background-color: var(--light-purple);
+  border: 2px solid var(--light-purple);
+  color: white;
+}
+
+.btn-modal-primary {
+  background: linear-gradient(45deg, var(--royal-purple) 0%, var(--light-purple) 100%);
+  border: none;
+  color: white;
+  padding: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-modal-primary:hover {
+  background: linear-gradient(45deg, var(--dark-navy) 0%, var(--royal-purple) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(14, 33, 72, 0.4);
+}
+
+.custom-modal a {
+  color: var(--royal-purple);
+}
+
+.custom-modal a:hover {
+  color: var(--dark-navy);
+}
+/* Estilos para la sección de bienvenida */
+.welcome-section {
+  background: linear-gradient(135deg, var(--light-gray) 0%, #ffffff 100%);
+}
+
+.welcome-image {
+  border: 3px solid var(--royal-purple);
+  box-shadow: 0 4px 12px rgba(72, 58, 160, 0.3);
+  height: 350px;
+}
+
+.welcome-title {
+  color: var(--dark-navy);
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.welcome-subtitle {
+  color: var(--royal-purple);
+  font-weight: 600;
+}
+
+.welcome-description {
+  color: var(--dark-navy);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.welcome-info {
+  color: var(--dark-navy);
+  font-size: 0.95rem;
+}
+
+/* Botones de la sección de bienvenida */
+.btn-welcome-primary {
+  background: linear-gradient(45deg, var(--royal-purple) 0%, var(--light-purple) 100%);
+  border: 2px solid var(--royal-purple);
+  color: white;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-welcome-primary:hover {
+  background: linear-gradient(45deg, var(--dark-navy) 0%, var(--royal-purple) 100%);
+  border-color: var(--dark-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(14, 33, 72, 0.4);
+}
+
+.btn-welcome-secondary {
+  background-color: transparent;
+  border: 2px solid var(--light-purple);
+  color: var(--light-purple);
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-welcome-secondary2 {
+  background-color: transparent;
+  border: 2px solid var(--royal-purple);
+  color: var(--dark-navy);
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-welcome-secondary2:hover {
+  background-color: var(--royal-purple);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(72, 58, 160, 0.4);
+}
+
+.btn-welcome-secondary:hover {
+  background-color: var(--light-purple);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(121, 101, 193, 0.4);
+}
+
+/* Carrusel color y opacidad */
+
+.carousel-indicators button {
+  background-color: var(--royal-purple) !important;
+  opacity: 0.5;
+}
+
+.carousel-indicators button.active {
+  background-color: var(--dark-navy) !important; /*important para sobreescribir cualquier otro estilo que se le pueda aplicar */
+  opacity: 1;
 }
